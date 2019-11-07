@@ -14,7 +14,7 @@ import com.learning.service.usermovierating.model.UserMovieRating;
 
 
 @RestController
-@RequestMapping("/movie-ratings")
+@RequestMapping("/api/v1/movie-ratings")
 public class RatingController {
 
 	Logger logger = LoggerFactory.getLogger(RatingController.class);
