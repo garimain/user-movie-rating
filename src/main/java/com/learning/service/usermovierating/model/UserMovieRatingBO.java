@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 public class UserMovieRatingBO {
 	
 	private String userId;
+	
 	private List<MovieRatingBO> listMovie;
 
 	

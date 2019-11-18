@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.learning.service.usermovierating.model.MovieRatingBO;
+import com.learning.service.usermovierating.model.UserMovieRatingSearchBO;
 import com.learning.service.usermovierating.repository.UserMovieRatingRepository;
 import com.learning.service.usermovierating.repository.model.UserMovieRating;
 
@@ -60,9 +61,13 @@ public class UserMovieRatingServiceTest {
 		
 		Optional<List<UserMovieRating>> userMovieRating = Optional.of(movieRatingList);
 		
+		Mockito.when(userMovieRatingRepository.findByUserIdAndMovieId(1, 1)).thenReturn(userMovieRating);
+		
 		Mockito.when(userMovieRatingRepository.findByUserId(1)).thenReturn(userMovieRating);
 		
-		List<MovieRatingBO> movieRatingBOList = userMovieRatingService.getUserMovieRatings(Integer.valueOf("1"));
+		UserMovieRatingSearchBO userMovieRatingSearchBO = new UserMovieRatingSearchBO("1", Optional.empty());
+		
+		List<MovieRatingBO> movieRatingBOList = userMovieRatingService.getUserMovieRatings(userMovieRatingSearchBO);
 		
 		
 		Assert.assertNotNull(movieRatingBOList);

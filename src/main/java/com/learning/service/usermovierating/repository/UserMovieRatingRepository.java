@@ -12,6 +12,7 @@ import com.learning.service.usermovierating.repository.model.UserMovieRating;
 public interface UserMovieRatingRepository extends JpaRepository <UserMovieRating, Integer> {
 	
 	public Optional<List<UserMovieRating>> findByUserId(Integer userId);
+	public Optional<List<UserMovieRating>> findByUserIdAndMovieId(Integer userId, Integer movieId);
 	
 	
 
