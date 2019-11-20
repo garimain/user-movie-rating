@@ -11,6 +11,9 @@ public class UserMovieRatingApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		
+		
+		
 	}
 
 }

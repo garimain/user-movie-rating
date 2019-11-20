@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class MovieRatingBO {
 	
+	private Integer ratingId;
 	private Integer movieId;
 	private double rating;
 

@@ -9,15 +9,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class UserMovieRatingBO {
+public class MovieInfoSearchResponseBO {
 	
-	private String userId;
+	private List<MovieBO> movieList;
 	
-	
-	private List<MovieRatingBO> listMovie;
-
+	//Other parameters can follow here e.g. pagination, warnings etc.
 	
 	
-
+	
+	
 }
